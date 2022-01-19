@@ -1,6 +1,8 @@
 
+import { fileTypeFromFile } from 'file-type';
 
-console.log("Hello From Node!!!");
+
+console.log(await fileTypeFromFile('imperial_march_noisy.wav'));
 
 
 
