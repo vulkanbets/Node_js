@@ -1,5 +1,8 @@
 {
+  "type": "module",
   "dependencies": {
+    "@tsconfig/node16": "^1.0.2",
+    "@types/node": "^17.0.10",
     "file-type": "^17.1.1",
     "plotly.js": "^2.8.3"
   }
