@@ -1,3 +1,5 @@
 # Node.js : Projects - Data Structures - Algorithms - Etc...
 
-- Some words I will edit later
+- Step #1 : tsc
+
+- Step #2 : node main.js
