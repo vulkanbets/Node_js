@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Multiple External Scripts</title>
+  </head>
+  <body>
+    <script src="./helloworld.js"></script>
+    <script src="./introduction.js"></script>
+  </body>
+</html>
