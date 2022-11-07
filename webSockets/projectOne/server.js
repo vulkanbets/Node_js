@@ -1,5 +1,5 @@
 const { WebSocketServer } = require('ws');
-const { PORT_INT } = require('./main.js');
+const { PORT_INT } = require('./consts.js');
 
 
 

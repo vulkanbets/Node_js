@@ -1,6 +1,5 @@
 const { WebSocket } = require('ws');
-const { WEBSOCKETADDR } = require('./main.js');
-
+const { WEBSOCKETADDR } = require('./consts.js');
 
 
 const ws = new WebSocket(WEBSOCKETADDR);

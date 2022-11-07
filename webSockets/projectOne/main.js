@@ -1,10 +1,12 @@
+const express = require('express')
+const APP = express()
+const HTTP_PORT = 20040
+APP.get('/', (req, res) =>
+{
+  res.send('Hello From Express!!')
+})
 
-
-// Connection Constants
-const ADDR = "192.168.1.4";
-const PORT = "20050";
-const PORT_INT = 20050;
-const WEBSOCKETADDR = "ws://" + ADDR + ":" + PORT;
-
-// Export To Outside "main.js"
-module.exports = { WEBSOCKETADDR, PORT_INT };
+APP.listen(HTTP_PORT, () =>
+{
+  console.log(`Example app listening on port ${HTTP_PORT}`)
+})
