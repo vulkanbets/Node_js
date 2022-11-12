@@ -60,9 +60,11 @@ function PopulateAssets()
     database : dataBase
     });
 
-    connection.connect(function(err)
+    connection.connect( err =>
     {
-        if (err) throw err;
+        if (err) {
+            throw err;
+        }
         console.log("Connected!");
 
         fs.readFile('./tickerList.txt', 'utf8', (err, data) =>
@@ -74,11 +76,14 @@ function PopulateAssets()
 
             // const tickers = data.split('\n');
             
-            // tickers.forEach(element =>
+            // var index = 0;
+            // tickers.forEach(item =>
             // {
-            //     var sql = "INSERT INTO `Robinhood Assets`.Assets (Symbol) VALUES('" + element + "')";
+            //     var sql = "INSERT INTO `<DATABASE>`.`<TABLE>` (`<COLUMN1>`, <COLUMN2>) VALUES(" + index + ", '" + item + "')";
+            //     index++;
+                // var sql = "INSERT INTO `<DATABASE>`.<TABLE> (<COLUMN1>) VALUES('" + item + "')";
 
-            //     connection.query(sql, function (err, result) {
+            //     connection.query(sql, (err, result) => {
             //         if (err) throw err;
             //         console.log("1 record inserted");
             //     });
