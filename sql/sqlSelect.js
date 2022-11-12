@@ -35,8 +35,7 @@ function RetrievePassword() {
     });
 }
 
-function RetrieveDataBase()
-{
+function RetrieveDataBase() {
     return new Promise( (resolve, reject) =>
     {
         fs.readFile('./database.txt', 'utf8', (err, data) =>
@@ -50,7 +49,6 @@ function RetrieveDataBase()
     });
 }
 
-
 function SelectAssets()
 {
     var connection = mysql.createConnection
@@ -61,12 +59,20 @@ function SelectAssets()
     database : dataBase
     });
 
-    connection.connect( err =>
-    {
+    connection.connect( err => {
         if (err) {
             throw err;
         }
         console.log("Connected!");
+        connection.query("SELECT * FROM `<DATABASE>`.`<TABLE>`", (err, result, fields) => {
+            if (err) {
+                throw err;
+            }
+            result.forEach(element => {
+                console.log(element);
+            });
+        });
+        connection.end();
     });
 }
 

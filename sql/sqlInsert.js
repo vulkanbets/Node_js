@@ -35,8 +35,7 @@ function RetrievePassword() {
     });
 }
 
-function RetrieveDataBase()
-{
+function RetrieveDataBase() {
     return new Promise( (resolve, reject) =>
     {
         fs.readFile('./database.txt', 'utf8', (err, data) =>
